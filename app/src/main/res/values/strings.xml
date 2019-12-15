@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">AndroidDeynenko2.1.1</string>
+    <string name="enter_money">Ввод денег</string>
+    <string name="info">"Информация об оплате</string>
+    <string name="ok">OK</string>
+    <string name="bank_card">С банковской карты</string>
+    <string name="mobile">С мобильного телефона</string>
+    <string name="cash">Наличными по адресу</string>
+    <string name="enter">Оплата подтверждена</string>
+</resources>
