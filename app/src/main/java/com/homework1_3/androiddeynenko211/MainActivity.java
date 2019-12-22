@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     private CheckBox mMobilePhoneChkBx;
     private CheckBox mCashAddressChkBx;
     private CheckBox checkedChangeListener;
+    private String info;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +37,10 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, R.string.enter, Toast.LENGTH_LONG).show();
+                int value = Integer.parseInt(mInputMoney.getText().toString());
+                String enter = getString(R.string.enter, value, info,
+                        mInputInfo.getText().toString());
+                Toast.makeText(MainActivity.this, enter, Toast.LENGTH_LONG).show();
             }
         });
     }
@@ -51,16 +55,19 @@ public class MainActivity extends AppCompatActivity {
                             resetCheckBoxes();
                             mBankCardChkBx.setChecked(true);
                             mInputInfo.setInputType(InputType.TYPE_CLASS_NUMBER);
+                            info = getString(R.string.bank_card_i);
                             break;
                         case R.id.mobilePhoneChkBx:
                             resetCheckBoxes();
                             mMobilePhoneChkBx.setChecked(true);
                             mInputInfo.setInputType(InputType.TYPE_CLASS_PHONE);
+                            info = getString(R.string.mobile_i);
                             break;
                         case R.id.cashAddressChkBx:
                             resetCheckBoxes();
                             mCashAddressChkBx.setChecked(true);
                             mInputInfo.setInputType(InputType.TYPE_CLASS_TEXT);
+                            info = getString(R.string.cash_i);
                             break;
                         default:
                     }
