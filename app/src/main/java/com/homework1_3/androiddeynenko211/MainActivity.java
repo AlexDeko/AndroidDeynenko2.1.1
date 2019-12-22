@@ -27,12 +27,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         initViews();
         resetCheckBoxes();
-        Ok();
+        ok();
 
 
     }
 
-    private void Ok(){
+    private void ok(){
         Button button = findViewById(R.id.btnOK);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
